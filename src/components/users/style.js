@@ -5,16 +5,11 @@ export const Container = style.div`
  position:relative;
 padding:2rem;
 border:2px solid #000;
-margin:5px;
+margin:5px auto;
 margin-bottom:20px;
 background:#fff;
 color:#000;
-
-
-@media(max-width:600px){
-    div{
-        max-width:600px;
-    }
+max-width:800px;
 
 }
 .profile{

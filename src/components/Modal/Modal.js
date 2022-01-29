@@ -1,5 +1,7 @@
 import React from "react";
 import { Container } from "./style";
+import { ImCancelCircle } from "react-icons/im";
+import { AiOutlineSend } from "react-icons/ai";
 
 const Modal = ({
     modal,
@@ -56,8 +58,14 @@ const Modal = ({
                         onChange={(event) => setLocation(event.target.value)}
                     />
                     <div>
-                        <button>Send</button>
-                        <button onClick={() => setModal(false)}>cancel</button>
+                        <button>
+                            <AiOutlineSend className="icon" />
+                            Send
+                        </button>
+                        <button onClick={() => setModal(false)}>
+                            <ImCancelCircle className="icon" />
+                            cancel
+                        </button>
                     </div>
                 </form>
             </Container>

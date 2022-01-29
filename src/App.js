@@ -4,6 +4,8 @@ import Home from "./components/Home";
 import Edit from "./components/Edit";
 import NewUser from "./components/newUser";
 
+import { AiOutlineUserAdd } from "react-icons/ai";
+
 const App = () => {
     const [data, setData] = useState(null);
 
@@ -24,7 +26,10 @@ const App = () => {
                         <h2>Users Profile</h2>
                     </Link>
                     <Link to="/newuser">
-                        <button>Add User</button>
+                        <button>
+                            <AiOutlineUserAdd className="icon" />
+                            Add User
+                        </button>
                     </Link>
                 </div>
                 <Routes>

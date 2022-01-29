@@ -3,6 +3,8 @@ import ButtonModal from "../ButtonModal";
 import Modal from "../Modal/Modal";
 import { Container } from "./style.js";
 
+import { FaTrashRestore } from "react-icons/fa";
+
 const Users = ({ item }) => {
     const [name, setName] = useState(item.name.first);
     const [email, setEmail] = useState(item.email);
@@ -15,7 +17,7 @@ const Users = ({ item }) => {
 
     console.log(item);
     return (
-        <Container ref={div}>
+        <Container className="Container" ref={div}>
             <div className="profile">
                 <img src={item.picture.large} alt="" />
                 <div className="details">
@@ -34,6 +36,7 @@ const Users = ({ item }) => {
                 <p>ID: {item.id.value}</p>
             </div>
             <button className="btn" onClick={handleDeleteUser}>
+                <FaTrashRestore className="icon" />
                 Delete
             </button>
             <Modal

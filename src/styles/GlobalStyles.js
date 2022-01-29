@@ -62,7 +62,13 @@ a{
     font-size: 1rem;
     border-radius:10px;
     cursor: pointer;
+    display: flex;
 
+}
+
+.icon{
+    font-size:1.2rem;
+    margin-right: 5px;
 }
 
 `;
