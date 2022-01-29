@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import Edit from "./components/Edit";
+import NewUser from "./components/newUser";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        try {
+            fetch(`https://randomuser.me/api/?results=10`)
+                .then((response) => response.json())
+                .then((json) => setData(json.results));
+        } catch (err) {
+            console.log(err);
+        }
+    }, [setData]);
+    return (
+        <>
+            <BrowserRouter>
+                <div className="header">
+                    <Link to="/">
+                        <h2>Users Profile</h2>
+                    </Link>
+                    <Link to="/newuser">
+                        <button>Add User</button>
+                    </Link>
+                </div>
+                <Routes>
+                    <Route path="/newuser" element={<NewUser />} />
+                    <Route path="/" element={<Home data={data} />} />
+                    <Route path="edit/:id" element={<Edit data={data} />} />
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
+};
 
 export default App;
