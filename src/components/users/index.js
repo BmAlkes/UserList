@@ -17,7 +17,7 @@ const Users = ({ item }) => {
 
     console.log(item);
     return (
-        <Container className="Container" ref={div}>
+        <Container className="section" ref={div}>
             <div className="profile">
                 <img src={item.picture.large} alt="" />
                 <div className="details">

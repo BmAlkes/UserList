@@ -19,7 +19,8 @@ body {
 
 @media (max-width: 768px) {
     body{
-        width: 500px;
+        max-width: 450px;
+        margin: 0px auto;
     }
 }
 

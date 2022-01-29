@@ -10,7 +10,6 @@ margin-bottom:20px;
 background:#fff;
 color:#000;
 max-width:800px;
-
 }
 .profile{
     display:flex
@@ -22,7 +21,7 @@ max-width:800px;
     padding:1rem;
 }
 
-@media(max-width:680px){
+@media(max-width:600px){
    .profile{
        flex-direction:column
    }
