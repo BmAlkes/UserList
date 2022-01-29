@@ -13,6 +13,16 @@ height:600px;
 margin: 30px;
 margin-left: 120px;
 
+@media (max-width: 768px){
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:420px;
+    margin: 0 auto;
+    
+}
+
 
 
 

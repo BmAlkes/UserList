@@ -17,7 +17,7 @@ body {
     
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     body{
         max-width: 450px;
         margin: 0px auto;

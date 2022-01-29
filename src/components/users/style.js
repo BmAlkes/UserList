@@ -10,6 +10,10 @@ margin-bottom:20px;
 background:#fff;
 color:#000;
 max-width:800px;
+@media(max-width:600px){
+    width:430px
+}
+
 }
 .profile{
     display:flex
