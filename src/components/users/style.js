@@ -22,6 +22,12 @@ max-width:800px;
     padding:1rem;
 }
 
+@media(max-width:680px){
+   .profile{
+       flex-direction:column
+   }
+}
+
 img{
     width:150px;
     padding:5px;

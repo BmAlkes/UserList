@@ -17,6 +17,12 @@ body {
     
 }
 
+@media (max-width: 768px) {
+    body{
+        width: 500px;
+    }
+}
+
 h1,
 h2,
 h3,
