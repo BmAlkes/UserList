@@ -32,7 +32,7 @@ max-width:800px;
 }
 
 img{
-    width:150px;
+    width:140px;
     padding:5px;
     border-radius: 15px;
 }

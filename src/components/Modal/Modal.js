@@ -15,6 +15,15 @@ const Modal = ({
 }) => {
     const handleForm = (event) => {
         event.preventDefault();
+        setName(event.target.value);
+        setEmail(event.target.value);
+        if (event.target.getAttribute("name") == "location") {
+            setLocation({
+                country: event.target.value,
+                city: event.target.value,
+                street: event.target.value,
+            });
+        }
         console.log(name, email, location);
     };
 
@@ -22,40 +31,40 @@ const Modal = ({
         return (
             <Container>
                 <form onSubmit={handleForm}>
-                    <label htmlFor="name">name</label>
+                    <label htmlFor="name">Name</label>
                     <input
                         type="text"
                         id="name"
                         placeholder="name"
-                        value={name}
-                        onChange={(event) => setName(event.target.value)}
+                        name={name}
+                        onChange={(event) => handleForm(event)}
                     />
-                    <label htmlFor="email">email</label>
+                    <label htmlFor="email">Email</label>
                     <input
                         type="text"
                         id="email"
                         placeholder="email"
-                        value={email}
-                        onChange={(event) => setEmail(event.target.value)}
+                        name={email}
+                        onChange={(event) => handleForm(event)}
                     />
                     <label htmlFor="location">Location</label>
                     <input
                         type="text"
-                        placeholder="location"
-                        value={location.country}
-                        onChange={(event) => setLocation(event.target.value)}
+                        placeholder="Country"
+                        name={"location"}
+                        onChange={(event) => handleForm(event)}
                     />
                     <input
                         type="text"
-                        placeholder="location"
-                        value={location.city}
-                        onChange={(event) => setLocation(event.target.value)}
+                        placeholder="State"
+                        name={"location"}
+                        onChange={(event) => handleForm(event)}
                     />
                     <input
                         type="text"
-                        placeholder="location"
-                        value={location.street.name}
-                        onChange={(event) => setLocation(event.target.value)}
+                        placeholder="city"
+                        name={"location"}
+                        onChange={(event) => handleForm(event)}
                     />
                     <div>
                         <button>

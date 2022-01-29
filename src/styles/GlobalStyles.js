@@ -54,7 +54,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 1px  rgba(256, 256, 256, 0.9);
+    border-bottom: 1px solid  rgba(256, 256, 256, 0.9);
     width: 80%;
     margin: 0 auto;
     top: 0px; 

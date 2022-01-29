@@ -8,18 +8,21 @@ import { FaTrashRestore } from "react-icons/fa";
 const Users = ({ item }) => {
     const [name, setName] = useState(item.name.first);
     const [email, setEmail] = useState(item.email);
-    const [location, setLocation] = useState({ ...item.location });
+    const [location, setLocation] = useState({
+        State: "",
+        Country: "",
+        city: "",
+    });
     const [modal, setModal] = useState(false);
     const handleDeleteUser = () => {
         div.current.remove();
     };
     const div = useRef();
 
-    console.log(item);
     return (
         <Container className="section" ref={div}>
             <div className="profile">
-                <img src={item.picture.large} alt="" />
+                <img src={item.picture.large} />
                 <div className="details">
                     <h3>Name</h3>
                     <p>{`${item.name.title} ${item.name.first} ${item.name.last}`}</p>
